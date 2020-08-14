@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import {connect} from 'react-redux';
 import {loginUser} from '../../ducks/reducer';
+import './Auth.css';
 
 class Auth extends React.Component {
     constructor(){
@@ -50,8 +51,8 @@ class Auth extends React.Component {
     
     render(){
         const {email, password} = this.state;
-        return <div className="login">
-                <div className="login-container">
+        return <div className="auth">
+                <div className="auth-container">
                     <h1>Howdy</h1>
                     {!this.state.newUser ?
                     <div>
