@@ -5,7 +5,8 @@ const massive = require('massive');
 const app = express();
 
 const {CONNECTION_STRING, SESSION_SECRET, SERVER_PORT} = process.env;
-const ctrl = require('./controller');
+const ctrl = require('./Controllers/controller');
+const pstctrl = require('./Controllers/postController');
 
 app.use(express.json());
 app.use(session({
@@ -30,5 +31,7 @@ app.post('/auth/register', ctrl.register)
 app.get('/auth/logout', ctrl.logout)
 app.get('/auth/user', ctrl.getUser)
 
+app.get('/auth/user', pstctrl.getPost);
 
-app.listen(SERVER_PORT, ()=> console.log(`Connected to port ${SERVER_PORT}`))
+
+app.listen(SERVER_PORT, ()=> console.log(`Connected to port ${SERVER_PORT}`));

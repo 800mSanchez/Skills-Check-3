@@ -1,0 +1,27 @@
+.Nav {
+    width: 10vw;
+    height: 100vh;
+    background-image: linear-gradient(  #FF70A6  , #FF9770, #FFD670);
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    color: white;
+   }
+
+.Dash {
+    display: flex;
+    top: 20px;
+    padding-bottom: 30vh;
+}
+
+.New {
+    display: flex;
+    top: 70px;
+    padding-bottom: 30vh;
+}
+
+.Logout {
+    display: flex;
+    padding-top: 30vh;
+}
+   
