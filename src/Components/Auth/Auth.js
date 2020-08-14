@@ -31,7 +31,7 @@ class Auth extends React.Component {
         const {email, password} = this.state;
         axios.post('/auth/login', {email, password}).then(res => {
             this.props.loginUser(res.data);
-            this.props.history.push('/front_page')
+            this.props.history.push('/dashboard')
         }).catch(err => {
             console.log(err);
             alert('Login Failed')
@@ -42,7 +42,7 @@ class Auth extends React.Component {
         const {email, password} = this.state;
         axios.post('/auth/register', {email, password}).then(res => {
             this.props.loginUser(res.data);
-            this.props.history.push('/front_page');
+            this.props.history.push('/dashboard');
         }).catch(err => {
             console.log(err);
             alert('Register Failed')
