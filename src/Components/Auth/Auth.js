@@ -49,6 +49,7 @@ class Auth extends React.Component {
     }
     
     render(){
+        const {email, password} = this.state;
         return <div className="login">
                 <div className="login-container">
                     <h1>Howdy</h1>
